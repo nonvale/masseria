@@ -88,7 +88,7 @@ export default function Eventi() {
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-eventi-cta"
               >
-                Richiedi Preventivo Eventi
+                {t('cta.events')}
               </Button>
             </Link>
           </div>

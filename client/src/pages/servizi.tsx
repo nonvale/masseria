@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/ui/gallery";
 import { HeroSection } from "@/components/ui/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
 export default function Servizi() {
+  const { t } = useLanguage();
   const services = [
     { icon: "fas fa-swimming-pool", title: "Piscine", description: "Piscina esterna riscaldata e piscina coperta con sistema fotovoltaico dedicato" },
     { icon: "fas fa-hot-tub", title: "Idromassaggio", description: "Area wellness con idromassaggio e zona relax per il vostro benessere" },
@@ -134,7 +136,7 @@ export default function Servizi() {
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-servizi-cta"
               >
-                Scopri Tutti i Servizi
+                {t('cta.services')}
               </Button>
             </Link>
           </div>

@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/ui/gallery";
 import { HeroSection } from "@/components/ui/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
 export default function Chiesa() {
+  const { t } = useLanguage();
   const churchFeatures = [
     { icon: "fas fa-calendar-alt", title: "XVII Secolo", description: "Costruzione originaria" },
     { icon: "fas fa-church", title: "110 mq", description: "Superficie totale" },
@@ -153,7 +155,7 @@ export default function Chiesa() {
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-chiesa-cta"
               >
-                Prenota la Tua Cerimonia
+                {t('cta.church')}
               </Button>
             </Link>
           </div>

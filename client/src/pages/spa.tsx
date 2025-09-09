@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/ui/gallery";
 import { HeroSection } from "@/components/ui/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
 export default function Spa() {
+  const { t } = useLanguage();
   const spaFeatures = [
     {
       icon: "fas fa-swimming-pool",
@@ -147,7 +149,7 @@ export default function Spa() {
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-spa-cta"
               >
-                Prenota il Tuo Benessere
+                {t('cta.spa')}
               </Button>
             </Link>
           </div>

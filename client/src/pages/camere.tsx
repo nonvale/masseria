@@ -127,7 +127,7 @@ export default function Camere() {
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-camere-cta"
               >
-                Prenota il Tuo Soggiorno
+                {t('cta.rooms')}
               </Button>
             </Link>
           </div>
