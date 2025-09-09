@@ -68,7 +68,7 @@ export default function Header() {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px]">
+              <SheetContent side="right" className="w-[280px] text-[#ffffff]">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navigation.map((item) => (
                     <Link
