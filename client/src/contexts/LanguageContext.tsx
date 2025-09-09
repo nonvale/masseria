@@ -100,16 +100,46 @@ const translations = {
 
     // Booking Page
     'booking.title': 'Prenota il Tuo Soggiorno',
-    'booking.subtitle': 'Contattaci per vivere un\'esperienza indimenticabile',
-    'booking.form.name': 'Nome e Cognome',
+    'booking.subtitle': 'Contattaci per prenotare la tua esperienza di lusso pugliese autentico o per organizzare il tuo evento indimenticabile',
+    'booking.form.title': 'Richiedi Informazioni',
+    'booking.form.name': 'Nome',
+    'booking.form.surname': 'Cognome',
     'booking.form.email': 'Email',
     'booking.form.phone': 'Telefono',
-    'booking.form.checkin': 'Data di Arrivo',
-    'booking.form.checkout': 'Data di Partenza',
-    'booking.form.guests': 'Numero di Ospiti',
+    'booking.form.eventType': 'Tipo di Evento/Soggiorno',
+    'booking.form.eventType.placeholder': 'Seleziona...',
+    'booking.form.eventType.wedding': 'Matrimonio',
+    'booking.form.eventType.event': 'Evento Privato',
+    'booking.form.eventType.leisure': 'Soggiorno Leisure',
+    'booking.form.eventType.business': 'Meeting/Business',
+    'booking.form.expectedDate': 'Data Prevista',
+    'booking.form.guests': 'Numero Ospiti',
     'booking.form.message': 'Messaggio',
+    'booking.form.message.placeholder': 'Descrivici le tue esigenze...',
+    'booking.form.privacy': 'Accetto il trattamento dei dati personali secondo la Privacy Policy',
     'booking.form.submit': 'Invia Richiesta',
-    'booking.form.success': 'Richiesta inviata con successo!',
+    'booking.form.success': 'Richiesta Inviata!',
+    'booking.form.success.message': 'Grazie per la tua richiesta! Ti contatteremo presto per discutere le tue esigenze.',
+    'booking.form.error': 'Errore',
+    'booking.form.error.privacy': 'Devi accettare il trattamento dei dati personali per continuare.',
+    'booking.contact.title': 'Contatti Diretti',
+    'booking.contact.phone': 'Telefono',
+    'booking.contact.email': 'Email',
+    'booking.contact.address': 'Indirizzo',
+    'booking.why.title': 'Perché Scegliere Masseria Termiteto',
+    'booking.why.masseria': 'Masseria autentica del XVI secolo',
+    'booking.why.hectares': '50 ettari di proprietà esclusiva',
+    'booking.why.church': 'Chiesa consacrata per matrimoni',
+    'booking.why.trulli': 'Trulli autentici ristrutturati',
+    'booking.why.spa': 'Spa e piscine riscaldate',
+    'booking.why.cuisine': 'Cucina gourmet professionale',
+
+    // CTA Buttons
+    'cta.rooms': 'Prenota il Tuo Soggiorno',
+    'cta.church': 'Prenota la Tua Cerimonia',
+    'cta.services': 'Scopri Tutti i Servizi',
+    'cta.spa': 'Prenota il Tuo Benessere',
+    'cta.events': 'Richiedi Preventivo Eventi',
 
     // Footer
     'footer.contact': 'Contatti',
@@ -296,6 +326,13 @@ const translations = {
     'rooms.masseria.desc': 'Exclusive suites in the main building of the masseria. 1,200 sqm distributed over 2 floors with 7 independent suites, each with unique features and luxury comforts.',
     'rooms.dependance.title': 'Dependance',
     'rooms.dependance.desc': 'Charming accommodations in the converted ancient stables and in the Tower. Intimate and characteristic spaces with independent access, perfect for exclusive and private stays.',
+
+    // CTA Buttons
+    'cta.rooms': 'Book Your Stay',
+    'cta.church': 'Book Your Ceremony',
+    'cta.services': 'Discover All Services',
+    'cta.spa': 'Book Your Wellness',
+    'cta.events': 'Request Event Quote',
   }
 };
 
