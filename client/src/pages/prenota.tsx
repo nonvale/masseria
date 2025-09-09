@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Prenota() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     nome: "",
     cognome: "",
@@ -28,8 +30,8 @@ export default function Prenota() {
     
     if (!formData.privacy) {
       toast({
-        title: "Errore",
-        description: "Devi accettare il trattamento dei dati personali per continuare.",
+        title: t('booking.form.error'),
+        description: t('booking.form.error.privacy'),
         variant: "destructive",
       });
       return;
@@ -37,8 +39,8 @@ export default function Prenota() {
 
     // TODO: Implement form submission logic
     toast({
-      title: "Richiesta Inviata!",
-      description: "Grazie per la tua richiesta! Ti contatteremo presto per discutere le tue esigenze.",
+      title: t('booking.form.success'),
+      description: t('booking.form.success.message'),
     });
 
     // Reset form
@@ -63,10 +65,9 @@ export default function Prenota() {
     <div className="pt-20 py-20 bg-muted min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-serif font-bold text-foreground mb-6">Prenota il Tuo Soggiorno</h1>
+          <h1 className="text-5xl font-serif font-bold text-foreground mb-6">{t('booking.title')}</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Contattaci per prenotare la tua esperienza di <strong>lusso pugliese autentico</strong> 
-            o per organizzare il tuo evento indimenticabile
+            {t('booking.subtitle')}
           </p>
         </div>
 
@@ -74,13 +75,13 @@ export default function Prenota() {
           {/* Contact Form */}
           <Card className="luxury-shadow">
             <CardHeader>
-              <CardTitle className="text-2xl font-serif">Richiedi Informazioni</CardTitle>
+              <CardTitle className="text-2xl font-serif">{t('booking.form.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="nome">Nome *</Label>
+                    <Label htmlFor="nome">{t('booking.form.name')} *</Label>
                     <Input
                       id="nome"
                       type="text"
@@ -91,7 +92,7 @@ export default function Prenota() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="cognome">Cognome *</Label>
+                    <Label htmlFor="cognome">{t('booking.form.surname')} *</Label>
                     <Input
                       id="cognome"
                       type="text"
@@ -104,7 +105,7 @@ export default function Prenota() {
                 </div>
 
                 <div>
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('booking.form.email')} *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -116,7 +117,7 @@ export default function Prenota() {
                 </div>
 
                 <div>
-                  <Label htmlFor="telefono">Telefono *</Label>
+                  <Label htmlFor="telefono">{t('booking.form.phone')} *</Label>
                   <Input
                     id="telefono"
                     type="tel"
@@ -128,27 +129,27 @@ export default function Prenota() {
                 </div>
 
                 <div>
-                  <Label htmlFor="tipoEvento">Tipo di Evento/Soggiorno *</Label>
+                  <Label htmlFor="tipoEvento">{t('booking.form.eventType')} *</Label>
                   <Select 
                     required 
                     value={formData.tipoEvento} 
                     onValueChange={(value) => handleInputChange("tipoEvento", value)}
                   >
                     <SelectTrigger data-testid="select-tipo-evento">
-                      <SelectValue placeholder="Seleziona..." />
+                      <SelectValue placeholder={t('booking.form.eventType.placeholder')} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="matrimonio">Matrimonio</SelectItem>
-                      <SelectItem value="evento">Evento Privato</SelectItem>
-                      <SelectItem value="soggiorno">Soggiorno Leisure</SelectItem>
-                      <SelectItem value="business">Meeting/Business</SelectItem>
+                      <SelectItem value="matrimonio">{t('booking.form.eventType.wedding')}</SelectItem>
+                      <SelectItem value="evento">{t('booking.form.eventType.event')}</SelectItem>
+                      <SelectItem value="soggiorno">{t('booking.form.eventType.leisure')}</SelectItem>
+                      <SelectItem value="business">{t('booking.form.eventType.business')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="dataPrevista">Data Prevista</Label>
+                    <Label htmlFor="dataPrevista">{t('booking.form.expectedDate')}</Label>
                     <Input
                       id="dataPrevista"
                       type="date"
@@ -158,7 +159,7 @@ export default function Prenota() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="numeroOspiti">Numero Ospiti</Label>
+                    <Label htmlFor="numeroOspiti">{t('booking.form.guests')}</Label>
                     <Input
                       id="numeroOspiti"
                       type="number"
@@ -172,11 +173,11 @@ export default function Prenota() {
                 </div>
 
                 <div>
-                  <Label htmlFor="messaggio">Messaggio</Label>
+                  <Label htmlFor="messaggio">{t('booking.form.message')}</Label>
                   <Textarea
                     id="messaggio"
                     rows={4}
-                    placeholder="Descrivici le tue esigenze..."
+                    placeholder={t('booking.form.message.placeholder')}
                     value={formData.messaggio}
                     onChange={(e) => handleInputChange("messaggio", e.target.value)}
                     data-testid="textarea-messaggio"
@@ -192,7 +193,7 @@ export default function Prenota() {
                     data-testid="checkbox-privacy"
                   />
                   <Label htmlFor="privacy" className="text-sm text-muted-foreground">
-                    Accetto il trattamento dei dati personali secondo la Privacy Policy *
+                    {t('booking.form.privacy')} *
                   </Label>
                 </div>
 
@@ -202,7 +203,7 @@ export default function Prenota() {
                   className="w-full luxury-shadow"
                   data-testid="button-submit-form"
                 >
-                  Invia Richiesta
+                  {t('booking.form.submit')}
                 </Button>
               </form>
             </CardContent>
@@ -212,7 +213,7 @@ export default function Prenota() {
           <div className="space-y-8">
             <Card className="luxury-shadow">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif">Contatti Diretti</CardTitle>
+                <CardTitle className="text-2xl font-serif">{t('booking.contact.title')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-4">
@@ -220,7 +221,7 @@ export default function Prenota() {
                     <i className="fas fa-phone text-primary-foreground"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Telefono</h3>
+                    <h3 className="font-semibold">{t('booking.contact.phone')}</h3>
                     <p className="text-muted-foreground">+39 080 XXX XXXX</p>
                   </div>
                 </div>
@@ -229,7 +230,7 @@ export default function Prenota() {
                     <i className="fas fa-envelope text-primary-foreground"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Email</h3>
+                    <h3 className="font-semibold">{t('booking.contact.email')}</h3>
                     <p className="text-muted-foreground">info@masserietermiteto.com</p>
                   </div>
                 </div>
@@ -238,7 +239,7 @@ export default function Prenota() {
                     <i className="fas fa-map-marker-alt text-primary-foreground"></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Indirizzo</h3>
+                    <h3 className="font-semibold">{t('booking.contact.address')}</h3>
                     <p className="text-muted-foreground">
                       Contrada Termiteto<br />
                       70043 Monopoli (BA)<br />
@@ -252,31 +253,31 @@ export default function Prenota() {
             {/* Quick Facts */}
             <Card className="bg-primary text-primary-foreground luxury-shadow">
               <CardContent className="p-8">
-                <h3 className="text-xl font-serif font-bold mb-4">Perché Scegliere Masseria Termiteto</h3>
+                <h3 className="text-xl font-serif font-bold mb-4">{t('booking.why.title')}</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>Masseria autentica</strong> del XVI secolo
+                    <strong>{t('booking.why.masseria')}</strong>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>50 ettari</strong> di proprietà esclusiva
+                    <strong>{t('booking.why.hectares')}</strong>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>Chiesa consacrata</strong> per matrimoni
+                    <strong>{t('booking.why.church')}</strong>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>Trulli autentici</strong> ristrutturati
+                    <strong>{t('booking.why.trulli')}</strong>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>Spa e piscine</strong> riscaldate
+                    <strong>{t('booking.why.spa')}</strong>
                   </li>
                   <li className="flex items-center">
                     <i className="fas fa-check mr-2"></i> 
-                    <strong>Cucina gourmet</strong> professionale
+                    <strong>{t('booking.why.cuisine')}</strong>
                   </li>
                 </ul>
               </CardContent>
