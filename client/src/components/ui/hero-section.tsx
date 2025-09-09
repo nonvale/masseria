@@ -36,7 +36,7 @@ export function HeroSection({
           <Link href={ctaLink}>
             <Button 
               size="lg" 
-              className="luxury-shadow text-lg px-8 py-4"
+              className="luxury-shadow text-lg px-8 py-4 hover:bg-background hover:text-foreground hover:border-primary active:bg-muted active:text-foreground transition-all duration-300"
               data-testid="button-hero-cta"
             >
               {ctaText}
