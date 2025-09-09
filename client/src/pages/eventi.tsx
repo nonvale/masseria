@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/ui/gallery";
 import { HeroSection } from "@/components/ui/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
 export default function Eventi() {
+  const { t } = useLanguage();
+  
   const galleryImages = [
     {
       src: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
@@ -34,24 +37,19 @@ export default function Eventi() {
   return (
     <div className="pt-20">
       <HeroSection
-        title="Eventi Indimenticabili"
-        subtitle="<strong>Matrimoni di lusso</strong> e <strong>eventi esclusivi</strong> nella nostra <strong>masseria pugliese autentica</strong>. 
-          Celebrazioni uniche che uniscono tradizione millenaria e raffinatezza moderna."
+        title={t('events.hero.title')}
+        subtitle={t('events.hero.subtitle')}
         backgroundImage="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
-        ctaText="Richiedi Preventivo"
+        ctaText={t('events.hero.cta') || 'Richiedi Preventivo'}
         ctaLink="/prenota"
       />
 
       <div className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-serif font-bold text-foreground mb-6">Eventi Indimenticabili</h1>
+            <h1 className="text-5xl font-serif font-bold text-foreground mb-6">{t('events.hero.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              <strong>Matrimoni di lusso</strong> e <strong>eventi esclusivi</strong> nella nostra <strong>masseria pugliese autentica</strong>.
-              
-              <br /><br />
-              Celebrazioni uniche che uniscono <strong>tradizione millenaria</strong> e raffinatezza moderna in un contesto di bellezza straordinaria. 
-              La nostra masseria offre spazi versatili per ogni tipo di evento, dalla chiesa consacrata del XVII secolo ai giardini panoramici.
+              {t('events.hero.subtitle')}
             </p>
           </div>
 

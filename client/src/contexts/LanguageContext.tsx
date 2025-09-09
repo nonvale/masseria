@@ -143,6 +143,16 @@ const translations = {
     'home.story.p1': 'Masseria Termiteto è una masseria pugliese autentica del XVI secolo, completamente restaurata preservando la sua architettura originale e il fascino storico.',
     'home.story.p2': 'Immersa in 50 ettari di terreno con uliveti secolari, la nostra proprietà offre un\'esperienza di lusso apuliano unica, dove tradizione e comfort moderno si incontrano perfettamente.',
     'home.story.p3': 'Dalla chiesa consacrata del XVII secolo ai trulli autentici restaurati, ogni spazio racconta la storia millenaria della Puglia in un contesto di lusso esclusivo.',
+
+    // Additional room types
+    'rooms.elisabetta.title': 'Trulli Elisabetta',
+    'rooms.elisabetta.desc': 'Trulli di lusso con 4 coni tradizionali completamente ristrutturati. 117 mq di comfort esclusivo con giardino privato, orto e patio panoramico ideale per momenti di relax.',
+    'rooms.michele.title': 'Trulli Michele',
+    'rooms.michele.desc': 'Suite di lusso con 7 coni tradizionali e area wellness esclusiva. 160 mq con ipogeo antico, piscina privata e vista panoramica mozzafiato sui 50 ettari della proprietà.',
+    'rooms.masseria.title': 'Masseria Principale',
+    'rooms.masseria.desc': 'Suite esclusive nell\'edificio principale della masseria. 1.200 mq distribuiti su 2 piani con 7 suite indipendenti, ognuna con caratteristiche uniche e comfort di lusso.',
+    'rooms.dependance.title': 'Dependance',
+    'rooms.dependance.desc': 'Alloggi di charme nelle antiche stalle convertite e nella Torretta. Spazi intimi e caratteristici con accesso indipendente, perfetti per soggiorni esclusivi e riservati.',
   },
   en: {
     // Navigation
@@ -276,6 +286,16 @@ const translations = {
     'home.story.p1': 'Masseria Termiteto is an authentic 16th-century Apulian masseria, completely restored while preserving its original architecture and historic charm.',
     'home.story.p2': 'Immersed in 50 hectares of land with ancient olive groves, our property offers a unique Apulian luxury experience, where tradition and modern comfort meet perfectly.',
     'home.story.p3': 'From the 17th-century consecrated church to the restored authentic trulli, every space tells the millenary history of Puglia in an exclusive luxury context.',
+
+    // Additional room types
+    'rooms.elisabetta.title': 'Trulli Elisabetta',
+    'rooms.elisabetta.desc': 'Luxury trulli with 4 traditional cones completely renovated. 117 sqm of exclusive comfort with private garden, vegetable garden and panoramic patio ideal for relaxation.',
+    'rooms.michele.title': 'Trulli Michele',
+    'rooms.michele.desc': 'Luxury suite with 7 traditional cones and exclusive wellness area. 160 sqm with ancient hypogeum, private pool and breathtaking panoramic view over the 50 hectares of the property.',
+    'rooms.masseria.title': 'Main Masseria',
+    'rooms.masseria.desc': 'Exclusive suites in the main building of the masseria. 1,200 sqm distributed over 2 floors with 7 independent suites, each with unique features and luxury comforts.',
+    'rooms.dependance.title': 'Dependance',
+    'rooms.dependance.desc': 'Charming accommodations in the converted ancient stables and in the Tower. Intimate and characteristic spaces with independent access, perfect for exclusive and private stays.',
   }
 };
 
