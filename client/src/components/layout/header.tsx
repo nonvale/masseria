@@ -3,18 +3,22 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/ui/language-selector";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
 
+  const { t } = useLanguage();
+
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Eventi", href: "/eventi" },
-    { name: "Camere", href: "/camere" },
-    { name: "Servizi", href: "/servizi" },
-    { name: "Spa", href: "/spa" },
-    { name: "Chiesa", href: "/chiesa" },
+    { name: t('nav.home'), href: "/" },
+    { name: t('nav.events'), href: "/eventi" },
+    { name: t('nav.rooms'), href: "/camere" },
+    { name: t('nav.services'), href: "/servizi" },
+    { name: t('nav.spa'), href: "/spa" },
+    { name: t('nav.church'), href: "/chiesa" },
   ];
 
   return (
@@ -48,11 +52,12 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Booking Button & Mobile Menu */}
+          {/* Language Selector, Booking Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            <LanguageSelector />
             <Link href="/prenota">
               <Button className="luxury-shadow" data-testid="button-prenota">
-                Prenota
+                {t('nav.book')}
               </Button>
             </Link>
 
@@ -63,7 +68,7 @@ export default function Header() {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] text-[#ffffff]">
+              <SheetContent side="right" className="w-[280px]">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navigation.map((item) => (
                     <Link

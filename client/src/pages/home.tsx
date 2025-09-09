@@ -1,26 +1,26 @@
 import { FeatureCard } from "@/components/ui/feature-card";
 import { HeroSection } from "@/components/ui/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   const features = [
     {
-      title: "Eventi Indimenticabili",
-      description: `<strong>Matrimoni di lusso</strong> e eventi esclusivi nella nostra <strong>masseria pugliese autentica</strong>. 
-        Celebrazioni uniche tra storia e tradizione, con la chiesa consacrata e spazi per 200 ospiti.`,
+      title: t('home.feature1.title'),
+      description: t('home.feature1.desc'),
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       link: "/eventi"
     },
     {
-      title: "Trulli di Lusso",
-      description: `<strong>Appartamenti di lusso</strong> nei nostri <strong>trulli autentici</strong> restaurati con cura. 
-        Suite esclusive che uniscono tradizione pugliese e comfort moderno per un soggiorno indimenticabile.`,
+      title: t('home.feature2.title'),
+      description: t('home.feature2.desc'),
       image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       link: "/camere"
     },
     {
-      title: "Servizi Esclusivi",
-      description: `Spa wellness, piscine riscaldate, idromassaggio e cucina gourmet nella nostra <strong>struttura pugliese di lusso</strong>. 
-        Relax e benessere in un ambiente esclusivo e riservato.`,
+      title: t('home.feature3.title'),
+      description: t('home.feature3.desc'),
       image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       link: "/servizi"
     }
@@ -30,11 +30,10 @@ export default function Home() {
     <div className="pt-20">
       {/* Hero */}
       <HeroSection
-        title="Benvenuti alla<br><span class='text-accent'>Masseria Termiteto</span>"
-        subtitle="<strong>Luxury Apulian Resort</strong> autentico immerso in 50 ettari di bellezza mediterranea. 
-          Esperienza di <strong>lusso pugliese</strong> tra trulli storici e tradizione millenaria."
+        title={t('home.hero.title')}
+        subtitle={t('home.hero.subtitle')}
         backgroundImage="https://pixabay.com/get/g74db269017f42bfcec438b21a86bd271ff2cc98bab39a7735337c59f79ea4162f95523c4a2133a424cddf77920532ca0146abf22d7c90426f9616dc8029cc585_1280.jpg"
-        ctaText="Scopri il Lusso"
+        ctaText={t('home.hero.cta')}
         ctaLink="/prenota"
       />
 
@@ -43,10 +42,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Esperienze Indimenticabili
+              {t('home.experiences.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Tre dimensioni del <strong>lusso pugliese</strong> che renderanno il vostro soggiorno unico e memorabile
+              {t('home.experiences.subtitle')}
             </p>
           </div>
 
@@ -69,19 +68,16 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-serif font-bold text-foreground mb-6">La Nostra Storia</h2>
+              <h2 className="text-4xl font-serif font-bold text-foreground mb-6">{t('home.story.title')}</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  <strong>Masseria Termiteto</strong> è una <strong>masseria pugliese autentica</strong> del XVI secolo, 
-                  completamente restaurata preservando la sua architettura originale e il fascino storico.
+                  {t('home.story.p1')}
                 </p>
                 <p>
-                  Immersa in <strong>50 ettari di terreno</strong> con uliveti secolari, la nostra proprietà offre 
-                  un'esperienza di <strong>lusso apuliano</strong> unica, dove tradizione e comfort moderno si incontrano perfettamente.
+                  {t('home.story.p2')}
                 </p>
                 <p>
-                  Dalla chiesa consacrata del XVII secolo ai <strong>trulli autentici</strong> restaurati, 
-                  ogni spazio racconta la storia millenaria della Puglia in un contesto di lusso esclusivo.
+                  {t('home.story.p3')}
                 </p>
               </div>
             </div>
