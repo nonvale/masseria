@@ -1,0 +1,1132 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masseria Termiteto - Luxury Apulian Resort | Trulli di Lusso Monopoli</title>
+    <meta name="description" content="Masseria Termiteto, luxury Apulian resort in Monopoli. Authentic trulli, luxury weddings, exclusive events, spa wellness, and 50 hectares of pure luxury in Puglia.">
+    <meta name="keywords" content="luxury apulian resort, luxury weddings puglia, luxury trulli, luxury masseria, authentic puglia experience, exclusive events monopoli, luxury apartments puglia">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Masseria Termiteto - Luxury Apulian Resort">
+    <meta property="og:description" content="Experience authentic luxury in our exclusive Apulian masseria with trulli, spa, and 50 hectares of Mediterranean beauty.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masserietermiteto.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["var(--font-sans)"],
+                    serif: ["var(--font-serif)"],
+                    mono: ["var(--font-mono)"],
+                }
+            },
+        }
+    };
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --background: hsl(45 20% 98%);
+            --foreground: hsl(25 15% 18%);
+            --card: hsl(40 15% 96%);
+            --card-foreground: hsl(25 15% 20%);
+            --popover: hsl(40 15% 96%);
+            --popover-foreground: hsl(25 15% 20%);
+            --primary: hsl(35 45% 55%);
+            --primary-foreground: hsl(45 20% 98%);
+            --secondary: hsl(30 25% 88%);
+            --secondary-foreground: hsl(25 15% 25%);
+            --muted: hsl(35 15% 92%);
+            --muted-foreground: hsl(25 10% 45%);
+            --accent: hsl(40 60% 75%);
+            --accent-foreground: hsl(25 15% 20%);
+            --destructive: hsl(0 65% 55%);
+            --destructive-foreground: hsl(45 20% 98%);
+            --border: hsl(35 20% 85%);
+            --input: hsl(35 20% 85%);
+            --ring: hsl(35 45% 55%);
+            --radius: 0.75rem;
+            --font-sans: "Inter", sans-serif;
+            --font-serif: "Playfair Display", serif;
+        }
+        
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+        }
+        
+        .luxury-shadow {
+            box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .scroll-smooth { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans bg-background text-foreground scroll-smooth">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-primary-foreground font-serif font-bold text-lg">MT</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-serif font-bold text-foreground">MASSERIA</h1>
+                        <p class="text-sm text-muted-foreground -mt-1">TERMITETO</p>
+                        <p class="text-xs text-muted-foreground">LUXURY APULIAN RESORT</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="#eventi" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Eventi</a>
+                    <a href="#camere" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Camere</a>
+                    <a href="#servizi" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Servizi</a>
+                    <a href="#spa" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Spa</a>
+                    <a href="#chiesa" class="nav-link text-foreground hover:text-primary transition-colors font-medium">Chiesa</a>
+                </nav>
+                
+                <!-- Booking Button & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all luxury-shadow">
+                        Prenota
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2">
+                        <i class="fas fa-bars text-xl text-foreground"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Home</a>
+                    <a href="#eventi" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Eventi</a>
+                    <a href="#camere" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Camere</a>
+                    <a href="#servizi" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Servizi</a>
+                    <a href="#spa" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Spa</a>
+                    <a href="#chiesa" class="nav-link text-foreground hover:text-primary transition-colors font-medium py-2">Chiesa</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <!-- Hero -->
+            <div class="relative h-screen">
+                <!-- Scenic view of traditional Apulian trulli architecture in golden hour light -->
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://pixabay.com/get/g74db269017f42bfcec438b21a86bd271ff2cc98bab39a7735337c59f79ea4162f95523c4a2133a424cddf77920532ca0146abf22d7c90426f9616dc8029cc585_1280.jpg');"></div>
+                <div class="absolute inset-0 hero-gradient"></div>
+                <div class="relative h-full flex items-center justify-center text-center text-white">
+                    <div class="max-w-4xl px-4">
+                        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6">
+                            Benvenuti alla<br>
+                            <span class="text-accent">Masseria Termiteto</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto font-light">
+                            <strong>Luxury Apulian Resort</strong> autentico immerso in 50 ettari di bellezza mediterranea. 
+                            Esperienza di <strong>lusso pugliese</strong> tra trulli storici e tradizione millenaria.
+                        </p>
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Scopri il Lusso
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Cards -->
+            <section class="py-20 bg-background">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Esperienze Indimenticabili</h2>
+                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                            Tre dimensioni del <strong>lusso pugliese</strong> che renderanno il vostro soggiorno unico e memorabile
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Eventi Card -->
+                        <div class="bg-card rounded-2xl overflow-hidden luxury-shadow hover:transform hover:scale-105 transition-all duration-300">
+                            <!-- Elegant wedding setup in traditional Apulian courtyard -->
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Luxury wedding events" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">Eventi Indimenticabili</h3>
+                                <p class="text-muted-foreground mb-6 leading-relaxed">
+                                    <strong>Matrimoni di lusso</strong> e eventi esclusivi nella nostra <strong>masseria pugliese autentica</strong>. 
+                                    
+                                    Celebrazioni uniche tra storia e tradizione, con la chiesa consacrata e spazi per 200 ospiti.
+                                </p>
+                                <div class="text-center">
+                                    <button onclick="showSection('eventi')" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">
+                                        Scopri di Più
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Camere Card -->
+                        <div class="bg-card rounded-2xl overflow-hidden luxury-shadow hover:transform hover:scale-105 transition-all duration-300">
+                            <!-- Luxurious trulli interior with authentic stone architecture -->
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Luxury trulli accommodations" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">Trulli di Lusso</h3>
+                                <p class="text-muted-foreground mb-6 leading-relaxed">
+                                    <strong>Appartamenti di lusso</strong> nei nostri <strong>trulli autentici</strong> restaurati con cura. 
+                                    
+                                    Suite esclusive che uniscono tradizione pugliese e comfort moderno per un soggiorno indimenticabile.
+                                </p>
+                                <div class="text-center">
+                                    <button onclick="showSection('camere')" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">
+                                        Scopri di Più
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Servizi Card -->
+                        <div class="bg-card rounded-2xl overflow-hidden luxury-shadow hover:transform hover:scale-105 transition-all duration-300">
+                            <!-- Modern luxury spa with stone architecture and ambient lighting -->
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Luxury spa services" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">Servizi Esclusivi</h3>
+                                <p class="text-muted-foreground mb-6 leading-relaxed">
+                                    Spa wellness, piscine riscaldate, idromassaggio e cucina gourmet nella nostra <strong>struttura pugliese di lusso</strong>. 
+                                    
+                                    Relax e benessere in un ambiente esclusivo e riservato.
+                                </p>
+                                <div class="text-center">
+                                    <button onclick="showSection('servizi')" class="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">
+                                        Scopri di Più
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section class="py-20 bg-muted">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-4xl font-serif font-bold text-foreground mb-6">La Nostra Storia</h2>
+                            <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                                <p>
+                                    <strong>Masseria Termiteto</strong> è una <strong>masseria pugliese autentica</strong> del XVI secolo, 
+                                    completamente restaurata preservando la sua architettura originale e il fascino storico.
+                                </p>
+                                <p>
+                                    Immersa in <strong>50 ettari di terreno</strong> con uliveti secolari, la nostra proprietà offre 
+                                    un'esperienza di <strong>lusso apuliano</strong> unica, dove tradizione e comfort moderno si incontrano perfettamente.
+                                </p>
+                                <p>
+                                    Dalla chiesa consacrata del XVII secolo ai <strong>trulli autentici</strong> restaurati, 
+                                    ogni spazio racconta la storia millenaria della Puglia in un contesto di lusso esclusivo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- Aerial view of authentic Apulian masseria with trulli and olive groves -->
+                            <img src="https://pixabay.com/get/g5a830c9c663ef73c98cef4e6202f40279cf16a1d56cacca9944a3144fef37cc33d2196393f2c03d086ab374696c2aa737e771e26535e1a6f9a321842ab4fa0a3_1280.jpg" alt="Aerial view of Masseria Termiteto" class="rounded-2xl luxury-shadow">
+                            <!-- Traditional stone trulli architecture in Apulian countryside -->
+                            <img src="https://pixabay.com/get/gc50e41d850fc5d06bcef75581ce1098b68be34535c6dadbcd8ee8819eba1754dc4f6de00ae30cdeb2f6e83a506c136a0b5e7d6d87be10c95b80e2cfd8db5de24_1280.jpg" alt="Traditional trulli architecture" class="rounded-2xl luxury-shadow">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Eventi Section -->
+        <section id="eventi" class="page-section">
+            <div class="py-20 bg-background">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Eventi Indimenticabili</h1>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            <strong>Matrimoni di lusso</strong> e <strong>eventi esclusivi</strong> nella nostra <strong>masseria pugliese autentica</strong>. 
+                            
+                            Celebrazioni uniche che uniscono tradizione millenaria e raffinatezza moderna in un contesto di bellezza straordinaria.
+                        </p>
+                    </div>
+                    
+                    <!-- Event Features -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow">
+                            <i class="fas fa-church text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Chiesa Consacrata</h3>
+                            <p class="text-muted-foreground">Cerimonie religiose nella nostra chiesa del XVII secolo, completamente restaurata e benedetta.</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow">
+                            <i class="fas fa-users text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Fino a 200 Ospiti</h3>
+                            <p class="text-muted-foreground">Spazi versatili per ricevimenti di ogni dimensione, da eventi intimi a grandi celebrazioni.</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow">
+                            <i class="fas fa-utensils text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Cucina Gourmet</h3>
+                            <p class="text-muted-foreground">Cucina professionale con menu personalizzati che celebrano i sapori autentici della Puglia.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo Gallery -->
+                    <div class="mb-16">
+                        <h2 class="text-3xl font-serif font-bold text-center mb-8">Galleria Eventi</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Elegant outdoor wedding ceremony in Apulian countryside -->
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Outdoor wedding ceremony" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Romantic candlelit dinner setup under ancient stone arches -->
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Romantic candlelit dinner" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Traditional church interior prepared for wedding ceremony -->
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Church wedding ceremony" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Luxury reception setup with trulli in background -->
+                            <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Luxury reception setup" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Evening celebration with string lights and traditional architecture -->
+                            <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Evening celebration" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Bridal couple in traditional Apulian landscape -->
+                            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Bridal couple portrait" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Richiedi Preventivo Eventi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Camere Section -->
+        <section id="camere" class="page-section">
+            <div class="py-20 bg-muted">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Camere e Suite</h1>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            <strong>Appartamenti di lusso</strong> nei nostri <strong>trulli autentici</strong> e suite esclusive. 
+                            
+                            Ogni sistemazione è stata restaurata preservando l'architettura originale pugliese e dotata di ogni comfort moderno per un soggiorno indimenticabile.
+                        </p>
+                    </div>
+                    
+                    <!-- Accommodations -->
+                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                        <!-- Trulli Elisabetta -->
+                        <div class="bg-background rounded-2xl overflow-hidden luxury-shadow">
+                            <!-- Interior view of luxury trulli with traditional cone ceiling -->
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Trulli Elisabetta luxury interior" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold mb-4">Trulli Elisabetta</h3>
+                                <p class="text-muted-foreground mb-4 leading-relaxed">
+                                    <strong>Trulli di lusso</strong> con 4 coni tradizionali completamente ristrutturati. 
+                                    
+                                    117 mq di comfort esclusivo con giardino privato, orto e patio panoramico ideale per momenti di relax.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">4 Coni Autentici</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">117 mq</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Giardino Privato</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Trulli Michele -->
+                        <div class="bg-background rounded-2xl overflow-hidden luxury-shadow">
+                            <!-- Wellness area in underground stone hypogeum -->
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Trulli Michele wellness area" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold mb-4">Trulli Michele</h3>
+                                <p class="text-muted-foreground mb-4 leading-relaxed">
+                                    <strong>Suite di lusso</strong> con 7 coni tradizionali e area wellness esclusiva. 
+                                    
+                                    160 mq con ipogeo antico, piscina privata e vista panoramica mozzafiato sui 50 ettari della proprietà.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">7 Coni</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">160 mq</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Area Wellness</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Piscina Privata</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Masseria Principale -->
+                        <div class="bg-background rounded-2xl overflow-hidden luxury-shadow">
+                            <!-- Elegant suite interior with exposed stone walls and luxury furnishings -->
+                            <img src="https://images.unsplash.com/photo-1578774296842-c45e472b3028?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Masseria main building suite" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold mb-4">Masseria Principale</h3>
+                                <p class="text-muted-foreground mb-4 leading-relaxed">
+                                    <strong>Suite esclusive</strong> nell'edificio principale della masseria. 
+                                    
+                                    1.200 mq distribuiti su 2 piani con 7 suite indipendenti, ognuna con caratteristiche uniche e comfort di lusso.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">7 Suite</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">1.200 mq</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">2 Piani</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dependance -->
+                        <div class="bg-background rounded-2xl overflow-hidden luxury-shadow">
+                            <!-- Intimate dependance with private terrace and garden views -->
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Dependance accommodation" class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-serif font-bold mb-4">Dependance</h3>
+                                <p class="text-muted-foreground mb-4 leading-relaxed">
+                                    <strong>Alloggi di charme</strong> nelle antiche stalle convertite e nella Torretta. 
+                                    
+                                    Spazi intimi e caratteristici con accesso indipendente, perfetti per soggiorni esclusivi e riservati.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Ex Stalle</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Torretta</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Accesso Privato</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo Gallery -->
+                    <div class="mb-16">
+                        <h2 class="text-3xl font-serif font-bold text-center mb-8">Galleria Camere</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Authentic trulli bedroom with stone walls and luxury bedding -->
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Trulli bedroom interior" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Luxury bathroom with traditional stone and modern fixtures -->
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Luxury bathroom design" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Private garden terrace with trulli views -->
+                            <img src="https://images.unsplash.com/photo-1578774296842-c45e472b3028?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Private garden terrace" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Suite living area with exposed stone walls -->
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Suite living area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Traditional cone ceiling in trulli bedroom -->
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Traditional cone ceiling" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Master suite with panoramic countryside views -->
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Master suite with views" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Prenota il Tuo Soggiorno
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servizi Section -->
+        <section id="servizi" class="page-section">
+            <div class="py-20 bg-background">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Servizi Esclusivi</h1>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            Una gamma completa di <strong>servizi di lusso</strong> per rendere il vostro soggiorno indimenticabile. 
+                            
+                            Dalla <strong>cucina gourmet</strong> alle aree wellness, ogni dettaglio è curato per offrirvi il massimo comfort in questa <strong>struttura pugliese di lusso</strong>.
+                        </p>
+                    </div>
+                    
+                    <!-- Services Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-swimming-pool text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Piscine</h3>
+                            <p class="text-muted-foreground">Piscina esterna riscaldata e piscina coperta con sistema fotovoltaico dedicato</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-hot-tub text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Idromassaggio</h3>
+                            <p class="text-muted-foreground">Area wellness con idromassaggio e zona relax per il vostro benessere</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-utensils text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Cucina Gourmet</h3>
+                            <p class="text-muted-foreground">Cucina industriale professionale per eventi e servizi di ristorazione</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-car text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Parcheggio</h3>
+                            <p class="text-muted-foreground">Garage coperto da 500 mq e ampi spazi di parcheggio per gli ospiti</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-seedling text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">50 Ettari</h3>
+                            <p class="text-muted-foreground">Proprietà immersa in 50 ettari di uliveti e giardini mediterranei</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-warehouse text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Magazzino</h3>
+                            <p class="text-muted-foreground">750 mq di spazi di deposito per eventi e attrezzature</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-home text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Casa Custode</h3>
+                            <p class="text-muted-foreground">Servizio di custodia e assistenza 24/7 per la vostra sicurezza</p>
+                        </div>
+                        <div class="bg-card p-8 rounded-2xl luxury-shadow text-center hover:transform hover:scale-105 transition-all">
+                            <i class="fas fa-glass-cheers text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Portico Feste</h3>
+                            <p class="text-muted-foreground">235 mq di spazio coperto per eventi e celebrazioni</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Services -->
+                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                        <div>
+                            <h2 class="text-3xl font-serif font-bold mb-6">Servizi di Lusso</h2>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-primary-foreground text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold mb-2">Piscina Riscaldata All'Anno</h4>
+                                        <p class="text-muted-foreground">Sistema di riscaldamento a energia solare per un comfort ottimale in ogni stagione</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-primary-foreground text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold mb-2">Cucina Professionale</h4>
+                                        <p class="text-muted-foreground">Attrezzature di alta qualità per servizi di catering e ristorazione gourmet</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-primary-foreground text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold mb-2">Servizio Personalizzato</h4>
+                                        <p class="text-muted-foreground">Staff dedicato per servizi su misura e assistenza personalizzata</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <!-- Professional kitchen with modern equipment in traditional setting -->
+                            <img src="https://pixabay.com/get/g013a66dea38f8faf62e1f7a1ccd3ba004a2aa7d7bb4fb410c8aaccd4205fd9b5b62cbc29bb58b60ad4100d2088bf80f958e4b14257b754ad37345c1f8274ade6_1280.jpg" alt="Professional kitchen facilities" class="rounded-2xl luxury-shadow">
+                        </div>
+                    </div>
+                    
+                    <!-- Photo Gallery -->
+                    <div class="mb-16">
+                        <h2 class="text-3xl font-serif font-bold text-center mb-8">Galleria Servizi</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Outdoor heated pool with Mediterranean landscape -->
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Outdoor heated pool" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Professional kitchen with gourmet preparation area -->
+                            <img src="https://pixabay.com/get/g12e19891b0f8667bf44cebc3d50f5f241b7868e756c156ed5aa79ba58ba36504d7e23c80470d991d393530614e37a2b2677edbe140e3a6a9b233d94e7f273dfb_1280.jpg" alt="Professional kitchen" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Luxury spa jacuzzi area with stone architecture -->
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Spa jacuzzi area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Covered party area with traditional stone columns -->
+                            <img src="https://pixabay.com/get/gf25525c580a121f83eaaf1d3a9c5f5e060304ed94951926cfe47fce56bf78432c3ca18b2aeecb93d9b331d982e388dd73e8ead7923ebc0ee4b6004c48727fdb9_1280.jpg" alt="Covered party area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Olive grove gardens spanning 50 hectares -->
+                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Olive grove gardens" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Elegant dining service setup with traditional elements -->
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Elegant dining service" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Scopri Tutti i Servizi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spa Section -->
+        <section id="spa" class="page-section">
+            <div class="py-20 bg-muted">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Spa & Wellness</h1>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            Un'oasi di benessere dove <strong>tradizione pugliese</strong> e <strong>lusso moderno</strong> si fondono. 
+                            
+                            La nostra spa offre trattamenti esclusivi in un ambiente unico, tra piscine riscaldate, idromassaggio e aree relax immerse nella storia millenaria della masseria.
+                        </p>
+                    </div>
+                    
+                    <!-- Spa Features -->
+                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                        <div>
+                            <h2 class="text-3xl font-serif font-bold mb-6">Benessere Autentico</h2>
+                            <div class="space-y-6">
+                                <div class="bg-background p-6 rounded-xl luxury-shadow">
+                                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                                        <i class="fas fa-swimming-pool text-primary mr-3"></i>
+                                        Piscina Coperta Riscaldata
+                                    </h3>
+                                    <p class="text-muted-foreground">
+                                        Piscina interna di 220 mq ricavata in un antico fienile, riscaldata tutto l'anno con sistema fotovoltaico dedicato. 
+                                        
+                                        Un ambiente suggestivo con illuminazione LED cromatica e architettura in pietra tradizionale.
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-background p-6 rounded-xl luxury-shadow">
+                                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                                        <i class="fas fa-hot-tub text-primary mr-3"></i>
+                                        Idromassaggio di Lusso
+                                    </h3>
+                                    <p class="text-muted-foreground">
+                                        Area idromassaggio esclusiva con getti terapeutici, perfetta per il relax dopo una giornata di esplorazioni. 
+                                        
+                                        Ambiente intimo e riservato per momenti di puro benessere.
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-background p-6 rounded-xl luxury-shadow">
+                                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                                        <i class="fas fa-spa text-primary mr-3"></i>
+                                        Area Wellness Ipogea
+                                    </h3>
+                                    <p class="text-muted-foreground">
+                                        Nel complesso Trulli Michele, area wellness ricavata in un antico ipogeo sotterraneo. 
+                                        
+                                        Spazio unico che unisce storia millenaria e tecnologie moderne per il benessere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- Luxury indoor pool with ambient lighting and stone architecture -->
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="Indoor heated pool" class="rounded-2xl luxury-shadow">
+                            <!-- Spa treatment room with traditional stone elements -->
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Spa treatment room" class="rounded-2xl luxury-shadow">
+                        </div>
+                    </div>
+                    
+                    <!-- Spa Services -->
+                    <div class="grid md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-background p-8 rounded-2xl luxury-shadow text-center">
+                            <i class="fas fa-leaf text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Trattamenti Naturali</h3>
+                            <p class="text-muted-foreground">Massaggi e trattamenti con prodotti tipici pugliesi: olio extravergine, erbe aromatiche e oli essenziali mediterranei</p>
+                        </div>
+                        <div class="bg-background p-8 rounded-2xl luxury-shadow text-center">
+                            <i class="fas fa-water text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Idroterapia</h3>
+                            <p class="text-muted-foreground">Percorsi acquatici terapeutici nelle nostre piscine riscaldate per il benessere del corpo e della mente</p>
+                        </div>
+                        <div class="bg-background p-8 rounded-2xl luxury-shadow text-center">
+                            <i class="fas fa-user-clock text-4xl text-primary mb-4"></i>
+                            <h3 class="text-xl font-serif font-bold mb-4">Servizi Personalizzati</h3>
+                            <p class="text-muted-foreground">Programmi wellness su misura per soggiorni di relax o preparazione per eventi speciali</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo Gallery -->
+                    <div class="mb-16">
+                        <h2 class="text-3xl font-serif font-bold text-center mb-8">Galleria Spa</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Indoor pool with colorful ambient lighting -->
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Indoor pool with ambient lighting" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Luxury spa relaxation area with stone features -->
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Spa relaxation area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Jacuzzi area with traditional architecture -->
+                            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Jacuzzi spa area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Wellness treatment room with natural elements -->
+                            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Wellness treatment room" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Underground hypogeum wellness area -->
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Underground wellness area" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Meditation and relaxation space -->
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Meditation relaxation space" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Prenota il Tuo Benessere
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiesa Section -->
+        <section id="chiesa" class="page-section">
+            <div class="py-20 bg-background">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Chiesa Consacrata</h1>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            La nostra <strong>chiesa consacrata</strong> del XVII secolo rappresenta il cuore spirituale della masseria. 
+                            
+                            Completamente restaurata preservando la sua autenticità storica, offre uno spazio sacro unico per <strong>matrimoni religiosi</strong> e celebrazioni speciali in Puglia.
+                        </p>
+                    </div>
+                    
+                    <!-- Church Features -->
+                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                        <div>
+                            <!-- Historic church interior with traditional altar and sacred art -->
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Historic church interior" class="rounded-2xl luxury-shadow w-full">
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-3xl font-serif font-bold mb-6">Storia e Spiritualità</h2>
+                            <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                                <p>
+                                    La <strong>chiesa di Masseria Termiteto</strong> risale al XVII secolo e rappresenta un esempio straordinario 
+                                    di architettura sacra pugliese. Costruita secondo i canoni tradizionali, conserva ancora oggi il suo fascino originario.
+                                </p>
+                                <p>
+                                    Completamente <strong>consacrata e benedetta</strong>, la chiesa è autorizzata per celebrazioni religiose ufficiali, 
+                                    offrendo alle coppie la possibilità di celebrare il loro matrimonio in un contesto di rara bellezza e spiritualità.
+                                </p>
+                                <p>
+                                    L'<strong>antico campanile</strong> ancora funzionante veglia sulla proprietà, 
+                                    mentre gli interni restaurati con cura mantengono l'atmosfera sacra e solenne tipica delle chiese pugliesi storiche.
+                                </p>
+                            </div>
+                            
+                            <!-- Church Features -->
+                            <div class="grid md:grid-cols-2 gap-4 mt-8">
+                                <div class="bg-muted p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2 flex items-center">
+                                        <i class="fas fa-calendar-alt text-primary mr-2"></i>
+                                        XVII Secolo
+                                    </h4>
+                                    <p class="text-sm text-muted-foreground">Costruzione originaria</p>
+                                </div>
+                                <div class="bg-muted p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2 flex items-center">
+                                        <i class="fas fa-church text-primary mr-2"></i>
+                                        110 mq
+                                    </h4>
+                                    <p class="text-sm text-muted-foreground">Superficie totale</p>
+                                </div>
+                                <div class="bg-muted p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2 flex items-center">
+                                        <i class="fas fa-ring text-primary mr-2"></i>
+                                        Matrimoni Religiosi
+                                    </h4>
+                                    <p class="text-sm text-muted-foreground">Autorizzata per cerimonie</p>
+                                </div>
+                                <div class="bg-muted p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2 flex items-center">
+                                        <i class="fas fa-bell text-primary mr-2"></i>
+                                        Campanile Storico
+                                    </h4>
+                                    <p class="text-sm text-muted-foreground">Ancora funzionante</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wedding Services -->
+                    <div class="bg-muted rounded-3xl p-12 mb-16">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl font-serif font-bold mb-4">Matrimoni Religiosi</h2>
+                            <p class="text-muted-foreground max-w-2xl mx-auto">
+                                Celebrate il vostro amore in una cornice di spiritualità autentica e bellezza senza tempo
+                            </p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <i class="fas fa-heart text-4xl text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-3">Cerimonie Autorizzate</h3>
+                                <p class="text-muted-foreground">Matrimoni religiosi ufficiali in ambiente consacrato con validità legale completa</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-music text-4xl text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-3">Accompagnamento Musicale</h3>
+                                <p class="text-muted-foreground">Servizi di organista e coro per rendere la cerimonia ancora più emozionante</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-camera text-4xl text-primary mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-3">Location Fotografica</h3>
+                                <p class="text-muted-foreground">Spazi interni ed esterni perfetti per servizi fotografici di matrimonio</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo Gallery -->
+                    <div class="mb-16">
+                        <h2 class="text-3xl font-serif font-bold text-center mb-8">Galleria Chiesa</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Church altar with traditional religious decorations -->
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Church altar interior" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Wedding ceremony in historic church setting -->
+                            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Wedding ceremony" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Historic bell tower against blue sky -->
+                            <img src="https://pixabay.com/get/g4f1ac3d71699b97005e30f398264b99c957b58e0ab710cfba6773428cde8be51951e59e702f951d1b2a85fed80c32865a0417e5fc26221c66373883202425f25_1280.jpg" alt="Historic bell tower" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Sacred art and religious decorations -->
+                            <img src="https://pixabay.com/get/gd7d04aff821dcf6b2b8c227d42bd139e8cd0cac0091a8a8ea2ae3738bde0f7f68e3ca6d8db8c69a2594bdd04ebe653d900590f7b4e5aaffa56611cf7b5dd915a_1280.jpg" alt="Sacred religious art" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Church entrance with traditional architecture -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Church entrance" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                            <!-- Restored church interior with wooden pews -->
+                            <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Church interior with pews" class="rounded-xl luxury-shadow hover:scale-105 transition-transform">
+                        </div>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="showSection('prenota')" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                            Prenota la Tua Cerimonia
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prenota Section -->
+        <section id="prenota" class="page-section">
+            <div class="py-20 bg-muted">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h1 class="text-5xl font-serif font-bold text-foreground mb-6">Prenota il Tuo Soggiorno</h1>
+                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                            Contattaci per prenotare la tua esperienza di <strong>lusso pugliese autentico</strong> 
+                            o per organizzare il tuo evento indimenticabile
+                        </p>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-background rounded-2xl p-8 luxury-shadow">
+                            <h2 class="text-2xl font-serif font-bold mb-6">Richiedi Informazioni</h2>
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Nome *</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Cognome *</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">Telefono *</label>
+                                    <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">Tipo di Evento/Soggiorno *</label>
+                                    <select required class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <option value="">Seleziona...</option>
+                                        <option value="matrimonio">Matrimonio</option>
+                                        <option value="evento">Evento Privato</option>
+                                        <option value="soggiorno">Soggiorno Leisure</option>
+                                        <option value="business">Meeting/Business</option>
+                                    </select>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Data Prevista</label>
+                                        <input type="date" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Numero Ospiti</label>
+                                        <input type="number" min="1" max="200" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">Messaggio</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Descrivici le tue esigenze..."></textarea>
+                                </div>
+                                <div class="flex items-start space-x-2">
+                                    <input type="checkbox" id="privacy" required class="mt-1">
+                                    <label for="privacy" class="text-sm text-muted-foreground">
+                                        Accetto il trattamento dei dati personali secondo la Privacy Policy *
+                                    </label>
+                                </div>
+                                <button type="submit" class="w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all luxury-shadow">
+                                    Invia Richiesta
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div>
+                            <div class="bg-background rounded-2xl p-8 luxury-shadow mb-8">
+                                <h2 class="text-2xl font-serif font-bold mb-6">Contatti Diretti</h2>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                            <i class="fas fa-phone text-primary-foreground"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Telefono</h3>
+                                            <p class="text-muted-foreground">+39 080 XXX XXXX</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                            <i class="fas fa-envelope text-primary-foreground"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Email</h3>
+                                            <p class="text-muted-foreground">info@masserietermiteto.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                            <i class="fas fa-map-marker-alt text-primary-foreground"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Indirizzo</h3>
+                                            <p class="text-muted-foreground">Contrada Termiteto<br>70043 Monopoli (BA)<br>Puglia, Italia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Facts -->
+                            <div class="bg-primary text-primary-foreground rounded-2xl p-8 luxury-shadow">
+                                <h3 class="text-xl font-serif font-bold mb-4">Perché Scegliere Masseria Termiteto</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>Masseria autentica</strong> del XVI secolo</li>
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>50 ettari</strong> di proprietà esclusiva</li>
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>Chiesa consacrata</strong> per matrimoni</li>
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>Trulli autentici</strong> ristrutturati</li>
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>Spa e piscine</strong> riscaldate</li>
+                                    <li class="flex items-center"><i class="fas fa-check mr-2"></i> <strong>Cucina gourmet</strong> professionale</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-background py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-3 gap-12 mb-12">
+                <!-- Logo & Description -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                            <span class="text-primary-foreground font-serif font-bold">MT</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-bold">MASSERIA TERMITETO</h3>
+                            <p class="text-sm text-background/70">LUXURY APULIAN RESORT</p>
+                        </div>
+                    </div>
+                    <p class="text-background/80 leading-relaxed mb-4">
+                        <strong>Luxury Apulian Resort</strong> autentico del XVI secolo. 
+                        Esperienza di lusso pugliese tra trulli storici, 50 ettari di bellezza mediterranea e tradizione millenaria.
+                    </p>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-serif font-bold mb-6">Contatti</h3>
+                    <div class="space-y-3 text-background/80">
+                        <p><i class="fas fa-map-marker-alt mr-3 text-primary"></i> Contrada Termiteto, 70043 Monopoli (BA)</p>
+                        <p><i class="fas fa-phone mr-3 text-primary"></i> +39 080 XXX XXXX</p>
+                        <p><i class="fas fa-envelope mr-3 text-primary"></i> info@masserietermiteto.com</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-serif font-bold mb-6">Link Utili</h3>
+                    <div class="space-y-2">
+                        <a href="#eventi" class="block text-background/80 hover:text-primary transition-colors">Eventi e Matrimoni</a>
+                        <a href="#camere" class="block text-background/80 hover:text-primary transition-colors">Camere e Suite</a>
+                        <a href="#spa" class="block text-background/80 hover:text-primary transition-colors">Spa & Wellness</a>
+                        <a href="#chiesa" class="block text-background/80 hover:text-primary transition-colors">Chiesa Consacrata</a>
+                        <a href="#prenota" class="block text-background/80 hover:text-primary transition-colors">Prenota Ora</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mb-12">
+                <h3 class="text-lg font-serif font-bold mb-4">La Nostra Posizione</h3>
+                <div class="rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.1234567890!2d17.3123456!3d40.9567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMonopoli%2C%20BA%2C%20Italy!5e0!3m2!1sen!2sit!4v1234567890123!5m2!1sen!2sit"
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-background/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-background/60 text-sm mb-4 md:mb-0">
+                        © 2024 <strong>Masseria Termiteto</strong>. Tutti i diritti riservati.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-background/60 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-background/60 hover:text-primary transition-colors text-sm">Cookie Policy</a>
+                        <a href="#" class="text-background/60 hover:text-primary transition-colors text-sm">Termini e Condizioni</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const btn = this.querySelector('i');
+            
+            mobileMenu.classList.toggle('hidden');
+            btn.classList.toggle('fa-bars');
+            btn.classList.toggle('fa-times');
+        });
+
+        // Navigation and Section Management
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Update URL hash
+            window.history.pushState(null, null, `#${sectionId}`);
+            
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+            const menuBtn = document.getElementById('mobile-menu-btn').querySelector('i');
+            menuBtn.classList.remove('fa-times');
+            menuBtn.classList.add('fa-bars');
+        }
+
+        // Handle navigation clicks
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                showSection(sectionId);
+            });
+        });
+
+        // Handle initial page load
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showSection(hash);
+            } else {
+                showSection('home');
+            }
+        });
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // TODO: Implement form submission logic
+            alert('Grazie per la tua richiesta! Ti contatteremo presto per discutere le tue esigenze.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.classList.contains('nav-link')) return; // Already handled above
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    showSection(targetId);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
