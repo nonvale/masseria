@@ -7,29 +7,61 @@ import { Link } from "wouter";
 export default function Servizi() {
   const { t } = useLanguage();
   const services = [
-    { icon: "fas fa-swimming-pool", title: "Piscine", description: "Piscina esterna riscaldata e piscina coperta con sistema fotovoltaico dedicato" },
-    { icon: "fas fa-hot-tub", title: "Idromassaggio", description: "Area wellness con idromassaggio e zona relax per il vostro benessere" },
-    { icon: "fas fa-utensils", title: "Cucina Gourmet", description: "Cucina industriale professionale per eventi e servizi di ristorazione" },
-    { icon: "fas fa-car", title: "Parcheggio", description: "Garage coperto da 500 mq e ampi spazi di parcheggio per gli ospiti" },
-    { icon: "fas fa-seedling", title: "50 Ettari", description: "Proprietà immersa in 50 ettari di uliveti e giardini mediterranei" },
-    { icon: "fas fa-warehouse", title: "Magazzino", description: "750 mq di spazi di deposito per eventi e attrezzature" },
-    { icon: "fas fa-home", title: "Casa Custode", description: "Servizio di custodia e assistenza 24/7 per la vostra sicurezza" },
-    { icon: "fas fa-glass-cheers", title: "Portico Feste", description: "235 mq di spazio coperto per eventi e celebrazioni" }
+    {
+      icon: "fas fa-swimming-pool",
+      title: t('services.list.pool.title'),
+      description: t('services.list.pool.desc'),
+    },
+    {
+      icon: "fas fa-hot-tub",
+      title: t('services.list.hot_tub.title'),
+      description: t('services.list.hot_tub.desc'),
+    },
+    {
+      icon: "fas fa-utensils",
+      title: t('services.list.kitchen.title'),
+      description: t('services.list.kitchen.desc'),
+    },
+    {
+      icon: "fas fa-car",
+      title: t('services.list.parking.title'),
+      description: t('services.list.parking.desc'),
+    },
+    {
+      icon: "fas fa-seedling",
+      title: t('services.list.hectares.title'),
+      description: t('services.list.hectares.desc'),
+    },
+    {
+      icon: "fas fa-warehouse",
+      title: t('services.list.storage.title'),
+      description: t('services.list.storage.desc'),
+    },
+    {
+      icon: "fas fa-home",
+      title: t('services.list.caretaker.title'),
+      description: t('services.list.caretaker.desc'),
+    },
+    {
+      icon: "fas fa-glass-cheers",
+      title: t('services.list.portico.title'),
+      description: t('services.list.portico.desc'),
+    },
   ];
 
   const luxuryServices = [
     {
-      title: "Piscina Riscaldata All'Anno",
-      description: "Sistema di riscaldamento a energia solare per un comfort ottimale in ogni stagione"
+      title: t('services.luxury.pool.title'),
+      description: t('services.luxury.pool.desc'),
     },
     {
-      title: "Cucina Professionale",
-      description: "Attrezzature di alta qualità per servizi di catering e ristorazione gourmet"
+      title: t('services.luxury.kitchen.title'),
+      description: t('services.luxury.kitchen.desc'),
     },
     {
-      title: "Servizio Personalizzato",
-      description: "Staff dedicato per servizi su misura e assistenza personalizzata"
-    }
+      title: t('services.luxury.personal.title'),
+      description: t('services.luxury.personal.desc'),
+    },
   ];
 
   const galleryImages = [
@@ -61,28 +93,25 @@ export default function Servizi() {
 
   return (
     <div className="pt-20">
-      <HeroSection
-        title="Servizi Esclusivi"
-        subtitle="Una gamma completa di <strong>servizi di lusso</strong> per rendere il vostro soggiorno indimenticabile. 
-          Dalla <strong>cucina gourmet</strong> alle aree wellness, ogni dettaglio è curato."
-        backgroundImage="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
-        ctaText="Scopri Tutti i Servizi"
-        ctaLink="/prenota"
-      />
+        <HeroSection
+          title={t('services.hero.title')}
+          subtitle={t('services.hero.subtitle')}
+          backgroundImage="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
+          ctaText={t('cta.services')}
+          ctaLink="/prenota"
+        />
 
       <div className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-serif font-bold text-foreground mb-6">Servizi Esclusivi</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Una gamma completa di <strong>servizi di lusso</strong> per rendere il vostro soggiorno indimenticabile.
-              
-              <br /><br />
-              Dalla <strong>cucina gourmet</strong> alle aree wellness, ogni dettaglio è curato per offrirvi il massimo comfort 
-              in questa <strong>struttura pugliese di lusso</strong>. I nostri servizi uniscono tradizione e innovazione 
-              per garantire un'esperienza unica.
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-serif font-bold text-foreground mb-6">
+                {t('services.hero.title')}
+              </h1>
+              <p
+                className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: t('services.intro') }}
+              />
+            </div>
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -101,7 +130,7 @@ export default function Servizi() {
           {/* Detailed Services */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6">Servizi di Lusso</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6">{t('services.luxury.title')}</h2>
               <div className="space-y-6">
                 {luxuryServices.map((service, index) => (
                   <div key={index} className="flex items-start space-x-4">
@@ -126,7 +155,7 @@ export default function Servizi() {
             </div>
           </div>
 
-          <Gallery images={galleryImages} title="Galleria Servizi" />
+            <Gallery images={galleryImages} title={t('services.gallery.title')} />
 
           {/* CTA */}
           <div className="text-center">
