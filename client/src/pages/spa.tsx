@@ -9,39 +9,36 @@ export default function Spa() {
   const spaFeatures = [
     {
       icon: "fas fa-swimming-pool",
-      title: "Piscina Coperta Riscaldata",
-      description: `Piscina interna di 220 mq ricavata in un antico fienile, riscaldata tutto l'anno con sistema fotovoltaico dedicato. 
-        Un ambiente suggestivo con illuminazione LED cromatica e architettura in pietra tradizionale.`
+      title: t("spa.features.covered_pool.title"),
+      description: t("spa.features.covered_pool.description")
     },
     {
       icon: "fas fa-hot-tub",
-      title: "Idromassaggio di Lusso",
-      description: `Area idromassaggio esclusiva con getti terapeutici, perfetta per il relax dopo una giornata di esplorazioni. 
-        Ambiente intimo e riservato per momenti di puro benessere.`
+      title: t("spa.features.hydromassage.title"),
+      description: t("spa.features.hydromassage.description")
     },
     {
       icon: "fas fa-spa",
-      title: "Area Wellness Ipogea",
-      description: `Nel complesso Trulli Michele, area wellness ricavata in un antico ipogeo sotterraneo. 
-        Spazio unico che unisce storia millenaria e tecnologie moderne per il benessere.`
+      title: t("spa.features.wellness_area.title"),
+      description: t("spa.features.wellness_area.description")
     }
   ];
 
   const spaServices = [
     {
       icon: "fas fa-leaf",
-      title: "Trattamenti Naturali",
-      description: "Massaggi e trattamenti con prodotti tipici pugliesi: olio extravergine, erbe aromatiche e oli essenziali mediterranei"
+      title: t("spa.services.natural.title"),
+      description: t("spa.services.natural.description")
     },
     {
       icon: "fas fa-water",
-      title: "Idroterapia",
-      description: "Percorsi acquatici terapeutici nelle nostre piscine riscaldate per il benessere del corpo e della mente"
+      title: t("spa.services.hydrotherapy.title"),
+      description: t("spa.services.hydrotherapy.description")
     },
     {
       icon: "fas fa-user-clock",
-      title: "Servizi Personalizzati",
-      description: "Programmi wellness su misura per soggiorni di relax o preparazione per eventi speciali"
+      title: t("spa.services.personalized.title"),
+      description: t("spa.services.personalized.description")
     }
   ];
 
@@ -75,32 +72,27 @@ export default function Spa() {
   return (
     <div className="pt-20">
       <HeroSection
-        title="Spa & Wellness"
-        subtitle="Un'oasi di benessere dove <strong>tradizione pugliese</strong> e <strong>lusso moderno</strong> si fondono. 
-          La nostra spa offre trattamenti esclusivi in un ambiente unico."
+        title={t("spa.hero.title")}
+        subtitle={t("spa.hero.subtitle")}
         backgroundImage="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
-        ctaText="Prenota il Tuo Benessere"
+        ctaText={t("cta.spa")}
         ctaLink="/prenota"
       />
 
       <div className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-serif font-bold text-foreground mb-6">Spa & Wellness</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Un'oasi di benessere dove <strong>tradizione pugliese</strong> e <strong>lusso moderno</strong> si fondono.
-              
-              <br /><br />
-              La nostra spa offre trattamenti esclusivi in un ambiente unico, tra <strong>piscine riscaldate</strong>, 
-              idromassaggio e aree relax immerse nella storia millenaria della masseria. Ogni spazio è progettato 
-              per il vostro benessere psicofisico.
-            </p>
+            <h1 className="text-5xl font-serif font-bold text-foreground mb-6">{t("spa.section.title")}</h1>
+            <p
+              className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t("spa.section.description") }}
+            ></p>
           </div>
 
           {/* Spa Features */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6">Benessere Autentico</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6">{t("spa.features.heading")}</h2>
               <div className="space-y-6">
                 {spaFeatures.map((feature, index) => (
                   <div key={index} className="bg-background p-6 rounded-xl luxury-shadow">
@@ -115,14 +107,14 @@ export default function Spa() {
             </div>
 
             <div className="space-y-6">
-              <img 
-                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
-                alt="Indoor heated pool" 
+              <img
+                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500"
+                alt="Indoor heated pool"
                 className="rounded-2xl luxury-shadow"
               />
-              <img 
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" 
-                alt="Spa treatment room" 
+              <img
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300"
+                alt="Spa treatment room"
                 className="rounded-2xl luxury-shadow"
               />
             </div>
@@ -139,17 +131,17 @@ export default function Spa() {
             ))}
           </div>
 
-          <Gallery images={galleryImages} title="Galleria Spa" />
+          <Gallery images={galleryImages} title={t("spa.gallery.title")} />
 
           {/* CTA */}
           <div className="text-center">
             <Link href="/prenota">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="luxury-shadow text-lg px-8 py-4"
                 data-testid="button-spa-cta"
               >
-                {t('cta.spa')}
+                {t("cta.spa")}
               </Button>
             </Link>
           </div>
